@@ -6,13 +6,14 @@
  Output: "olleh"
 =================================== */
 const ReverseString = (s) => {
+    let r = "";
     for (let i = 0; i < s.length; i++) {
         r += s[s.length - i - 1];
     }
     return r;
 }
 
-
+// console.log(ReverseString("hello"))
 
 
 
@@ -37,6 +38,7 @@ const CountVowels = (str1) => {
     return counter;
 }
 
+// console.log(CountVowels("programming"))
 
 
 
@@ -95,7 +97,7 @@ const FindMax = arr => {
     return max;
 }
 
-
+// console.log(FindMax([5, 1, 9, 3]))
 
 
 
@@ -112,13 +114,12 @@ const FindMax = arr => {
 
 const RemoveDuplicates = arr => {
 
-    let res = arr.sort(function(a,b){return a-b});
-    console.log(res);
+    let res = arr.sort(function (a, b) { return a - b });
     let output = [arr[0]];
 
     let j = 0;
-    for(let i = 0; i<res.length; i++){
-        if(output[j] != res[i]){
+    for (let i = 0; i < res.length; i++) {
+        if (output[j] != res[i]) {
             output.push(res[i]);
             j++;
         }
@@ -126,6 +127,7 @@ const RemoveDuplicates = arr => {
     return output;
 }
 
+// console.log(RemoveDuplicates([1, 2, 2, 3, 4, 4]))
 
 
 
@@ -143,13 +145,13 @@ const RemoveDuplicates = arr => {
 
 const SumArray = arr => {
     let sum = 0;
-    for(let value of arr) {
-        sum+= value;
+    for (let value of arr) {
+        sum += value;
     }
     return sum;
 }
 
-
+// console.log(SumArray([1, 2, 3, 4]))
 
 
 
@@ -167,15 +169,16 @@ const SumArray = arr => {
 
 const FindEvenNumber = arr => {
     let res = [];
-    for(let value of arr){
-        if(value % 2 === 0){
+    for (let value of arr) {
+        if (value % 2 === 0) {
             res.push(value);
         }
     }
-    
+
     return res;
 }
 
+// console.log(FindEvenNumber([1, 2, 3, 4, 5, 6]))
 
 
 
@@ -190,6 +193,31 @@ const FindEvenNumber = arr => {
 =================================== */
 
 
+
+const CapitalizeFirst = str => {
+    const WordFirstLatter = word => {
+    let FullWord = word.slice(0, 1).toUpperCase() + word.slice(1);
+    return FullWord;
+}
+
+    let arr = str.split(' ');
+    for (let i = 0; i< arr.length; i++){
+
+        arr[i] = WordFirstLatter(arr[i]);
+    }
+
+    return arr.join(' ');
+}
+console.log(CapitalizeFirst("ashik is best"))
+
+
+
+
+
+
+
+
+
 /* ===================================
  Problem 9: Find the Factorial of a Number
 
@@ -200,14 +228,14 @@ const FindEvenNumber = arr => {
 
 const Fact = num => {
     let res = 1;
-    for (let i = 1; i<= num; i++){
+    for (let i = 1; i <= num; i++) {
         res *= i;
     }
 
     return res;
 }
 
-
+// console.log(Fact(5))
 
 
 
@@ -229,19 +257,19 @@ const Fact = num => {
 
 
 const PingPongChallenge = () => {
-    for(let i  = 1; i<= 20  ; i++){
-            if(i % 3 === 0 && i % 5 === 0){
-                console.log("PingPong, ");
-            } else if (i % 3 === 0) {
-                console.log("Ping, ");
-            } else if (i % 5 === 0) {
-                console.log("Pong, ")
-            } else {
-                console.log(i + ", ")
-            }
-            
-    
+    for (let i = 1; i <= 20; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("PingPong, ");
+        } else if (i % 3 === 0) {
+            console.log("Ping, ");
+        } else if (i % 5 === 0) {
+            console.log("Pong, ")
+        } else {
+            console.log(i + ", ")
+        }
+
+
     }
 }
 
-// PingPongChallenge(); 
+// PingPongChallenge();
