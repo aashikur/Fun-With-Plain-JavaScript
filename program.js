@@ -141,6 +141,21 @@ const RemoveDuplicates = arr => {
  Output: 10
 =================================== */
 
+const SumArray = arr => {
+    let sum = 0;
+    for(let value of arr) {
+        sum+= value;
+    }
+    return sum;
+}
+
+
+
+
+
+
+
+
 
 /* ===================================
  Problem 7: Find Even Numbers in an Array
@@ -149,6 +164,21 @@ const RemoveDuplicates = arr => {
  Input: [1, 2, 3, 4, 5, 6]
  Output: [2, 4, 6]
 =================================== */
+
+const FindEvenNumber = arr => {
+    let res = [];
+    for(let value of arr){
+        if(value % 2 === 0){
+            res.push(value);
+        }
+    }
+    
+    return res;
+}
+
+
+
+
 
 
 /* ===================================
@@ -168,6 +198,20 @@ const RemoveDuplicates = arr => {
  Output: 120
 =================================== */
 
+const Fact = num => {
+    let res = 1;
+    for (let i = 1; i<= num; i++){
+        res *= i;
+    }
+
+    return res;
+}
+
+
+
+
+
+
 
 /* ===================================
  Problem 10: PingPong Challenge
@@ -182,3 +226,22 @@ const RemoveDuplicates = arr => {
  Example Output:
  1, 2, Ping, 4, Pong, Ping, 7, 8, Ping, Pong, 11, Ping, 13, 14, PingPong, 16 …
 =================================== */
+
+
+const PingPongChallenge = () => {
+    for(let i  = 1; i<= 20  ; i++){
+            if(i % 3 === 0 && i % 5 === 0){
+                console.log("PingPong, ");
+            } else if (i % 3 === 0) {
+                console.log("Ping, ");
+            } else if (i % 5 === 0) {
+                console.log("Pong, ")
+            } else {
+                console.log(i + ", ")
+            }
+            
+    
+    }
+}
+
+// PingPongChallenge(); 
